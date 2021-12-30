@@ -11,12 +11,16 @@ export default function Button(props) {
     disableShadow,
     disabled,
     size,
+    onClick,
+    style,
     startIcon,
     endIcon,
   } = props;
   if (disabled) {
     return (
       <button
+        onClick={onClick}
+        style={style}
         className={`${ButtonStyles.button} ${ButtonStyles[`button_${size}`]}  ${
           ButtonStyles[`${variant}_disabled`]
         }`}
@@ -31,6 +35,8 @@ export default function Button(props) {
   if (disableShadow) {
     return (
       <button
+        onClick={onClick}
+        style={style}
         className={`${ButtonStyles.button} ${ButtonStyles[`button_${size}`]} ${
           ButtonStyles[`${variant}_${color}`]
         }`}
@@ -43,6 +49,8 @@ export default function Button(props) {
   }
   return (
     <button
+      onClick={onClick}
+      style={style}
       className={`${ButtonStyles.button} ${ButtonStyles[`button_${size}`]} ${
         ButtonStyles[`${variant}_${color}`]
       } ${ButtonStyles.withShadow}`}
@@ -61,6 +69,8 @@ Button.propTypes = {
   size: PropTypes.oneOf(["sm", "md", "lg"]),
   disableShadow: PropTypes.bool,
   disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  style: PropTypes.object,
 };
 
 Button.defaultProps = {

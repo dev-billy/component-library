@@ -36,6 +36,7 @@ export default {
         options: ["default", "primary", "secondary", "danger"],
       },
     },
+    onClick: { onClick: { action: "clicked" } },
   },
 };
 
