@@ -44,12 +44,15 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
+    "@ckeditor/ckeditor5-build-classic": "^31.1.0",
+    "@ckeditor/ckeditor5-react": "^3.0.3",
     "@component-controls/pages": "^3.15.0",
     "@component-controls/storybook": "^3.15.0",
     "@component-controls/storybook-custom-docs": "^3.14.6",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@storybook/preset-scss": "^1.0.3",
+    "html-react-parser": "^1.4.4",
     "prop-types": "^15.8.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
