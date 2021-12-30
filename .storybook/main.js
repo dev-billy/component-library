@@ -4,12 +4,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/preset-scss",
-    {
-      name: "@component-controls/storybook-custom-docs",
-      options: {
-        pages: [require.resolve("./page-story.js")],
-      },
-    },
+    "@component-controls/storybook-custom-docs",
   ],
   framework: "@storybook/react",
   core: {
