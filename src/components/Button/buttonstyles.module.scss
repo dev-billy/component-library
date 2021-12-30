@@ -1,0 +1,133 @@
+//default button
+//no props
+@import "../../_colors.scss";
+.button {
+  background: none;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button_sm {
+  padding: 0.6em 1.1em;
+}
+.button_md {
+  padding: 0.8em 1.3em;
+}
+.button_lg {
+  padding: 1em 1.5em;
+}
+.button:hover {
+  cursor: pointer;
+}
+.withShadow {
+  box-shadow: 0px 2px 3px 0px #33333333;
+}
+
+@mixin buttonStyle($color, $bg, $border: false) {
+  color: $color;
+  background: $bg;
+  @if $border {
+    border: solid 1px $color;
+  }
+}
+
+//contained buttons
+.default_default {
+  @include buttonStyle($textColor_main, $default);
+}
+.default_default:hover {
+  background-color: $default_hover;
+}
+.default_primary {
+  @include buttonStyle($textColor_button_solid, $primary);
+}
+.default_primary:hover {
+  background-color: $primary_hover;
+}
+.default_secondary {
+  @include buttonStyle($textColor_button_solid, $secondary);
+}
+.default_secondary:hover {
+  background-color: $secondary_hover;
+}
+.default_danger {
+  @include buttonStyle($textColor_button_solid, $danger);
+}
+.default_danger:hover {
+  background-color: $danger_hover;
+}
+
+//outline
+.outlined_default {
+  @include buttonStyle($textColor_main, none, true);
+}
+.outlined_default:hover {
+  background-color: $default_hover_noBg;
+}
+.outlined_primary {
+  @include buttonStyle($primary, none, true);
+}
+.outlined_primary:hover {
+  background-color: $primary_hover_noBg;
+}
+.outlined_secondary {
+  @include buttonStyle($secondary, none, true);
+}
+.outlined_secondary:hover {
+  background-color: $secondary_hover_noBg;
+}
+.outlined_danger {
+  @include buttonStyle($danger, none, true);
+}
+.outlined_danger:hover {
+  background-color: $danger_hover_noBg;
+}
+
+//just text
+.text_default {
+  @include buttonStyle($textColor_main, none);
+}
+.text_default:hover {
+  background-color: $default_hover_noBg;
+}
+.text_primary {
+  @include buttonStyle($primary, none);
+}
+.text_primary:hover {
+  background-color: $primary_hover_noBg;
+}
+.text_secondary {
+  @include buttonStyle($secondary, none);
+}
+.text_secondary:hover {
+  background-color: $secondary_hover_noBg;
+}
+.text_danger {
+  @include buttonStyle($danger, none);
+}
+.text_danger:hover {
+  background-color: $danger_hover_noBg;
+}
+
+//disabledButtons
+
+.text_disabled {
+  @include buttonStyle($textColor_inactive, none);
+}
+.text_disabled:hover {
+  cursor: not-allowed;
+}
+.outlined_disabled {
+  @include buttonStyle($textColor_inactive, none, true);
+}
+.outlined_disabled:hover {
+  cursor: not-allowed;
+}
+.default_disabled {
+  @include buttonStyle($textColor_inactive, $default);
+}
+.default_disabled:hover {
+  cursor: not-allowed;
+}
