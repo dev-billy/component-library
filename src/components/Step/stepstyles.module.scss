@@ -1,0 +1,13 @@
+.step {
+  background: rgba(255, 255, 255, 0.77);
+  box-shadow: 0px 0px 4px #d2d2d2;
+  width: max-content;
+  min-width: 100px;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1em 1em;
+}
+.step img {
+  margin-right: 15px;
+}

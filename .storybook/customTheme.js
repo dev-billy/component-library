@@ -1,5 +1,5 @@
 import { create } from "@storybook/theming";
-import logo from "../src/asset/logo-component-library.svg";
+import logo from "../src/assets/logo-component-library.svg";
 export default create({
   base: "light",
   brandTitle: "LearnLabs Component Library",
