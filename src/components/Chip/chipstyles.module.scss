@@ -1,0 +1,86 @@
+//default chip
+// no colors
+@import "../../_colors.scss";
+.chip {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 27px;
+}
+.sm {
+  padding: 0.375rem 0.75rem;
+}
+.md {
+  padding: 0.5rem 1rem;
+}
+.lg {
+  padding: 0.75rem 1.5rem;
+}
+.chip:hover {
+  cursor: pointer;
+}
+
+@mixin chipStyle($color, $bg, $border: false) {
+  color: $color;
+  background: $bg;
+  @if $border {
+    border: solid 1px $color;
+  }
+}
+
+/**
+variant_color 
+**/
+
+//outlined
+.outlined_default {
+  @include chipStyle($textColor_main, none, true);
+}
+.outlined_default:hover {
+  background-color: $default_hover_noBg;
+}
+.outlined_primary {
+  @include chipStyle($primary, none, true);
+}
+.outlined_primary:hover {
+  background-color: $primary_hover_noBg;
+}
+.outlined_secondary {
+  @include chipStyle($secondary, none, true);
+}
+.outlined_secondary:hover {
+  background-color: $secondary_hover_noBg;
+}
+
+.outlined_danger {
+  @include chipStyle($danger, none, true);
+}
+.outlined_danger:hover {
+  background-color: $danger_hover_noBg;
+}
+
+//filled
+.filled_default {
+  @include chipStyle($textColor_main, $default);
+}
+.filled_default:hover {
+  background-color: $default_hover;
+}
+.filled_primary {
+  @include chipStyle($textColor_button_solid, $primary);
+}
+.filled_primary:hover {
+  background-color: $primary_hover;
+}
+.filled_secondary {
+  @include chipStyle($textColor_button_solid, $secondary);
+}
+.filled_secondary:hover {
+  background-color: $secondary_hover;
+}
+.filled_danger {
+  @include chipStyle($textColor_button_solid, $danger);
+}
+.filled_danger:hover {
+  background-color: $danger_hover;
+}
